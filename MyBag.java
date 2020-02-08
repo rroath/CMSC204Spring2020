@@ -48,8 +48,14 @@ public class MyBag implements BagInterface {
 
 	@Override
 	public int getFrequencyOf(Coin anEntry) {
-		// TODO Auto-generated method stub
-		return 0;
+		int count=0;
+		
+		for(int x=0; x<Bank.size(); x++) {
+			if(Bank.get(x).equals(anEntry))
+				count++;
+		}
+		
+		return count;
 	}
 
 	@Override
